@@ -26,4 +26,4 @@
     - Primary / Foreign Key
 
 
-![](https://en.wikipedia.org/wiki/Linux)
+!["Tux"](https://en.wikipedia.org/wiki/Linux)
