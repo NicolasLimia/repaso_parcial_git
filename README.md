@@ -11,7 +11,7 @@
 - **Bash**
 
 ![](https://camo.githubusercontent.com/791b9a6f6d30abb12973f05de913fdf51ea9bb898dde9b41b2d301460d04097e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3235362f312a46454539386957696e6c5a42596b78424147384d76412e706e67)
-- **Regex**
+- **Regex** ["REGEX 101"](https://regex101.com "Regex 101")
     - grep
     - sed
 
@@ -33,7 +33,7 @@
 
 ![](https://avatars.githubusercontent.com/u/18133?s=200&v=4)
 
-- **Docker**
+- **Docker** ["DOCKER HUB"](https://hub.docker.com "Docker HUB")
     - Servicios, puertos, contenedores e imagenes
     - DockerFile
     - Volumenes
