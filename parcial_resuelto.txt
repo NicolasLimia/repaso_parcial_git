@@ -1,0 +1,54 @@
+Registro de partidos
+
+Enunciado:
+Lucas y Martín juegan todas las semanas un partido de fútbol con su grupo de amigos. Para organizar
+quiénes juegan, utilizan un grupo de WhatsApp donde alguien envía una lista y los demás se anotan. Sin
+embargo, este sistema genera problemas frecuentes: la persona que envía la lista suele tener prioridad porque
+ya está anotada, y quienes ven el mensaje tarde muchas veces quedan afuera porque los cupos se llenan
+rápidamente.
+Cansados de esta situación, deciden crear un sistema que permita a todos anotarse de manera más
+ordenada y justa. La idea inicial es desarrollar una aplicación web donde cada jugador pueda registrarse y
+anotarse a los partidos semanales, evitando confusiones y mejorando la organización.
+Tomás, que no participa en los partidos pero tiene interés en el desarrollo de software, se suma al
+proyecto. Le entusiasma la idea y propone pensar el sistema con una visión más amplia, no solo para resolver
+el problema actual sino también para agregar nuevas funcionalidades en el futuro.
+A medida que avanzan las conversaciones, Tomás sugiere que el sistema podría incluir
+funcionalidades adicionales como carga de resultados, estadísticas de rendimiento por jugador, historial de
+partidos e incluso registro de lesiones. También plantea que, a largo plazo, podrían ofrecer la plataforma a
+otros grupos de jugadores o equipos, ampliando el alcance del sistema.
+El equipo decide comenzar con una aplicación web simple como primera versión, dejando abierta la
+posibilidad de desarrollar una aplicación móvil más adelante. Sin embargo, surgen diferencias en algunas
+decisiones técnicas clave que deberán resolver antes de comenzar a desarrollar.
+Por un lado, Lucas y Martín proponen desarrollar todo el sistema utilizando scripts en Bash, ya que es
+una herramienta que conocen. Por otro lado, Tomás no está convencido de que sea la mejor opción y sugiere
+evaluar alternativas más adecuadas para este tipo de aplicación.
+
+
+Preguntas:
+
+1. Lucas y Martín deciden que el lenguaje para hacer el sistema sea Bash, pero Tomás no está
+convencido. ¿Creés que Bash es una buena opción para desarrollar una aplicación web como la
+descripta? Justificá tu respuesta.
+
+2. Tomás propone utilizar GitHub para el desarrollo del proyecto.
+¿Qué es GitHub y en qué aspectos creés que beneficiaría al equipo utilizarlo?
+
+3. Pensando en el sistema que quieren construir, ¿qué tablas, campos y relaciones debería tener la base
+de datos?
+Explicá claramente:
+- qué entidades principales existirían (por ejemplo: jugadores, partidos, etc.)
+- qué relaciones hay entre ellas
+- cuáles serían las claves foráneas (foreign keys) y para qué sirven
+Se recomienda justificar todas las decisiones.
+
+4. Escribí una sentencia de SQL que muestre información de (al menos) 2 tablas, y esté ordenada.
+Explicá en un párrafo qué es lo que se supone que la sentencia muestra.
+
+5. Respecto a la Ingeniería de Software ¿Qué etapas de la ingeniería de software se aplicaron hasta
+ahora?
+
+6. Tomás leyó por ahí “Docker”, pero no entiende bien si le sirve o no “Los 3 tenemos compus con Linux”
+piensa. ¿Crees que les serviría utilizar Docker en este proyecto? ¿Por qué?
+
+
+
