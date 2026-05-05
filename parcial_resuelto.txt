@@ -38,14 +38,17 @@ descripta? Justificá tu respuesta.
 
 - No creo que Bash sea la opción más adecuada para desarrollar el sistema, mucho menos si es una página web. 
   Si bien es cierto que bash es un lenguaje muy poderoso para automatizar tareas o códigos repetidos, no creo que sea una buena idea utilizarlo como lenguaje principal.
-  Principalmente diria que seria mucho más viable a la hora de hablar de desarrollos de aplicaciones web utilizar lenguajes como Java, HTML o CSS para estos ambitos en los que el programa se "maneja" por navegador antes que bash que suele utilizarse para proyectos de pocas lineas de código.
+  Principalmente diria que seria mucho más viable a la hora de hablar de desarrollos de aplicaciones web utilizar lenguajes como Java, HTML o CSS para estos ambitos en los 
+  que el programa se "maneja" por navegador antes que bash que suele utilizarse para proyectos de pocas lineas de código.
 __________________________________________________________________________________________________________________________________
 2. Tomás propone utilizar GitHub para el desarrollo del proyecto.
 ¿Qué es GitHub y en qué aspectos creés que beneficiaría al equipo utilizarlo?
 
-- Github es un controlador de versiones que usa Git como su base principal. Para este proyecto, tiene bastantes ventajas y beneficios el usar Github y seria una mala práctica el no usarlo. Algunos de los beneficios de Github son:
+- Github es un controlador de versiones que usa Git como su base principal. Para este proyecto, 
+tiene bastantes ventajas y beneficios el usar Github y seria una mala práctica el no usarlo. Algunos de los beneficios de Github son:
   - Tener vision y manejo completo sobre las versiones de un proyecto en donde si algo en el programa estalla, se puede hacer un backup y no perder todo el proyecto en un instante.
-  - Permite trabajar en ramas lo cual facilita el trabajo en equipo, ya que cada persona tendria un espacio de trabajo el cual no se pisa con el de otro y cuando ambas partes esten listas, estas se puedan mergear.
+  - Permite trabajar en ramas lo cual facilita el trabajo en equipo, ya que cada persona tendria un espacio 
+  de trabajo el cual no se pisa con el de otro y cuando ambas partes esten listas, estas se puedan mergear.
 __________________________________________________________________________________________________________________________________
 3. Pensando en el sistema que quieren construir, ¿qué tablas, campos y relaciones debería tener la base de datos?
 Explicá claramente:
@@ -53,6 +56,72 @@ Explicá claramente:
 - qué relaciones hay entre ellas
 - cuáles serían las claves foráneas (foreign keys) y para qué sirven
 Se recomienda justificar todas las decisiones.
+
+- Las tablas, campos y relaciones que debería de tener la base de datos son las siguientes:
+TABLAS:
+https://excalidraw.com/#json=Y0Gj_1_T8WRL45OsiECg5,Bc3gVBCntWoGxeovEg0MjA
+
+Contenidos:
+
+JUGADORES
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- equipo_id es una FOREIGN KEY que esta linkeada a la tabla jugadores_en_equipos
+- nombre VARCHAR(50) NOT NULL una cadena de 50 caracteres maximo no nula
+- apellido VARCHAR(50) NOT NULL una cadena de 50 caracteres maximo no nula
+
+EQUIPOS
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- id_jugadores es una FOREIGN KEY que esta linkeada a la tabla jugadores_en_equipos
+- nombre VARCHAR(50) NOT NULL una cadena de 50 caracteres maximo no nula
+- descripcion TEXT un texto
+- fecha_de_creacion DATE una fecha
+
+JUGADORES_EN_EQUIPO
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- id_equipo es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- id_jugador es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+
+CANCHA
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- nombre VARCHAR(50) NOT NULL una cadena de 50 caracteres maximo no nula
+- lugar VARCHAR(50) NOT NULL una cadena de 50 caracteres maximo no nula
+- descripcion TEXT un texto
+- Fecha_de_creacion DATE una fecha
+
+PARTIDOS
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- fecha DATE una fecha
+- id_cancha es una FOREIGN KEY que esta linkeada a la tabla canchas
+- id_equipo_a es una FOREIGN KEY que esta linkeada a la tabla equipos
+- id_equipo_b es una FOREIGN KEY que esta linkeada a la tabla equipos
+
+RESULTADOS
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- fecha DATE una fecha
+- resultado VARCHAR(50) NOT NULL una cadena de 50 caracteres maximo no nula
+- id_partido es una FOREIGN KEY que esta linkeada a la tabla partidos
+
+ESTADISTICAS
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- id_jugador es una FOREIGN KEY que esta linkeada a la tabla jugadores
+- puntos INT default 0 un entero que si no recibe valor sera 0
+- cant_goles INT DEFAULT 0 un entero que si no recibe valor sera 0
+- porcentaje_pases INT default 0 un entero que si no recibe valor sera 0
+
+HISTORIAL
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- id_resultados es una FOREIGN KEY que esta linkeada a la tabla resultados
+
+LESIONES
+- id es una PRINCIPAL KEY la cual va a conectar con otras tablas que necesiten consultar su informacion
+- id_jugador es una FOREIGN KEY que esta linkeada a la tabla jugadores
+- id_partido es una FOREIGN KEY que esta linkeada a la tabla partidos
+- fecha DATE una fecha
+- zona_lesion VARCHAR(50) NOT NULL una cadena de 50 caracteres maximo no nula
+
+
+Las claves foráneas sirven para referenciar una fila de una tabla a otra, 
+por ejemplo quiero que para los que son hinchas de un equipo tengan como id_equipo una foreign key que haga referencia al equipo en su id en tablas
 
 
 __________________________________________________________________________________________________________________________________
@@ -66,13 +135,20 @@ ahora?
 
 - Las etapas de la ingenieria de software que se aplicaron hasta ahora fueron las siguientes:
     - Analisis de requerimientos:
-        Según el problema principal se busca una solución, los problemas serian que la persona que crea la lista tiene prioridad frente a los demas, si ves el mensaje tarde perdes la posibilidad de anotarte. Entonces, teniendo esto, Lucas, Martin y Tomas deciden crear un sistema el cual satisfaga estas necesidades y hasta incluso algunas mas en el futuro (siguiente etapa)
+        Según el problema principal se busca una solución, los problemas serian que la persona que crea la lista tiene prioridad frente a los demas, 
+        si ves el mensaje tarde perdes la posibilidad de anotarte. 
+        Entonces, teniendo esto, Lucas, Martin y Tomas deciden crear un sistema el cual satisfaga estas necesidades y hasta incluso algunas mas en el futuro (siguiente etapa)
     - Diseño:
-        En esta etapa se discute cual va a ser la estructura del proyecto (lenguaje de programación, alcance(web o movil) y hasta incluso reproducibilidad. Tomas busca que el proyecto pueda ser mantenible a larga escala, lo cual es signo de un buen software. Con esto, se busca que no solo el proyecto cumpla con las necesidades actuales, sino que tambien pueda volverse mas amplio a futuro con nuevas features como el alcance de las personas al software, resultados, estadisticas, historial, lesiones, etc.
+        En esta etapa se discute cual va a ser la estructura del proyecto (lenguaje de programación, alcance(web o movil) y hasta incluso reproducibilidad. 
+        Tomas busca que el proyecto pueda ser mantenible a larga escala, lo cual es signo de un buen software. 
+        Con esto, se busca que no solo el proyecto cumpla con las necesidades actuales, 
+        sino que tambien pueda volverse mas amplio a futuro con nuevas features como el alcance de las personas al software, resultados, estadisticas, historial, lesiones, etc.
 __________________________________________________________________________________________________________________________________
 6. Tomás leyó por ahí “Docker”, pero no entiende bien si le sirve o no “Los 3 tenemos compus con Linux”
 piensa. ¿Crees que les serviría utilizar Docker en este proyecto? ¿Por qué?
 
-- Si que le serviria usar Docker, ya que no importa si los 3 tienen computadoras con Linux, pues sus dependencias pueden llegar a ser diferentes. Usando Docker el equipo se asegura que trabajan en un mismo entorno de trabajo el cual es iterable y reproducible en cualquier momento o dispositivo. El pretexto de "en mi maquina funciona" aplica con Docker de forma global (para todos los usuarios/devs)
+- Si que le serviria usar Docker, ya que no importa si los 3 tienen computadoras con Linux, pues sus dependencias pueden llegar a ser diferentes.
+Usando Docker el equipo se asegura que trabajan en un mismo entorno de trabajo el cual es iterable y reproducible en cualquier momento o dispositivo. 
+El pretexto de "en mi maquina funciona" aplica con Docker de forma global (para todos los usuarios/devs) y no solo a una persona que tenga X version de un programa o Y OS.
 
 
