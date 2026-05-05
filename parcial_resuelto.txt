@@ -59,7 +59,7 @@ Se recomienda justificar todas las decisiones.
 
 - Las tablas, campos y relaciones que debería de tener la base de datos son las siguientes:
 TABLAS:
-https://excalidraw.com/#json=Y0Gj_1_T8WRL45OsiECg5,Bc3gVBCntWoGxeovEg0MjA
+https://excalidraw.com/#json=Pjc4mhviFnmhdmWgfrYcc,csvREFExh7Kt1GvZHiTPHw
 
 Contenidos:
 
