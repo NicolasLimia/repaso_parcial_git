@@ -128,6 +128,15 @@ ________________________________________________________________________________
 4. Escribí una sentencia de SQL que muestre información de (al menos) 2 tablas, y esté ordenada.
 Explicá en un párrafo qué es lo que se supone que la sentencia muestra.
 
+SELECT * FROM jugadores
+ORDER BY apellido DESC
+ordena a los jugadores por apellido desde la a hasta la z
+
+SELECT id_jugador, puntos FROM estadisticas e
+join jugador j in e.id_jugador = j.id
+WHERE e.puntos > 70
+ORDER BY e.puntos DESC
+ordena los jugadores por puntos mayores a 70 en las estadisticas de mayor a menor
 
 __________________________________________________________________________________________________________________________________
 5. Respecto a la Ingeniería de Software ¿Qué etapas de la ingeniería de software se aplicaron hasta
